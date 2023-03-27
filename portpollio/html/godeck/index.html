@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="고덕평생학습관 입니다">
+    <meta name="keywords" content="고덕, 고덕도서관, godeck, 고덕평생학습관">
+    <meta name="author" content="duobin">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고덕평생학습관</title>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
+
+    <script src="js/custom.js"></script>
+</head>
+<body>
+    <div class="t_modal" id="tm">
+        <div class="t_m_inner">
+            <p>
+            오늘은 
+            <span class="red_txt">휴관일</span> 입니다. 05월 휴관일 
+            <span class="red_txt">05</span>, 
+            <span class="red_txt">08</span>, 
+            <span class="red_txt">09</span>, 
+            <span class="red_txt">23</span> 입니다. 
+            </p>
+        
+            <span id="check">
+                <input type="checkbox" value="checkbox" name="chkbox" id="chkday"/><label for="chkday">오늘 하루동안 보지 않기</label>
+            </span>
+            <button class="t_modal_btn" type="button" id="close"><i class="fa-regular fa-circle-xmark"></i></button>
+        </div><!-- //.t_m_inner -->
+    </div><!-- //.t_modal -->
+    <div class="gnbAll_modal">
+        <ul class="gModal_inner wrap clearfix">
+            <li class="gnbAll_tit"><a href="#">자료검색</a>
+                <ul>
+                    <li>
+                        <a href="#">자료검색</a>
+                    <li>
+                        <a href="#">스마트도서관</a>
+                        <ul>
+                            <li><a href="#">스마트도서관 자료검색</a></li>
+                            <li><a href="#">스마트도서관 안내 및 추천도서 신청</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">신착자료검색</a></li>
+                    <li><a href="#">주제별자료검색</a></li>
+                    <li><a href="#">연속간행물목록</a></li>
+                    <li><a href="#">비도서목록</a></li>
+                    <li><a href="#">희망도서신청</a></li>
+                    <li><a href="#">대출베스트</a></li>
+                    <li>
+                        <a href="#">사서추천도서</a>
+                        <ul>
+                            <li><a href="#">월별추천도서</a></li>
+                            <li><a href="#">주제별추천도서</a></li>
+                            <li><a href="#">북큐레이션</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">신착자료목록</a></li>
+                    <li><a href="#">특화자료목록</a></li>
+                </ul>
+            </li>
+
+            </li>
+            <li class="gnbAll_tit"><a href="#">프로그램</a>
+                <ul>
+                    <li>
+                        <a href="#">평생학습관일정</a>
+                        <ul>
+                            <li><a href="#">평생학습관일정</a></li>
+                            <li><a href="#">독서의달</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">독서문화행사</a>
+                        <ul>
+                            <li><a href="#">독서문화프로그램</a></li>
+                            <li><a href="#">영화상영</a></li>
+                            <li><a href="#">온on 독서토론</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">평생교육강좌</a>
+                        <ul>
+                            <li><a href="#">등록안내</a></li>
+                            <li><a href="#">평생교육강좌</a></li>
+                            <li><a href="#">온라인 강좌 안내</a></li>
+                            <li><a href="#">희망강좌제 "삼삼오오"</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">독서동아리</a></li>
+                    <li><a href="#">학습동아리</a></li>
+                    <li><a href="#">지역문화·평생학습정보</a></li>
+                    <li>
+                        <a href="#">전시·갤러리</a>
+                        <ul>
+                            <li><a href="#">전시·갤러리</a></li>
+                            <li><a href="#">고덕원화갤러리</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">독서퀴즈 이벤트</a></li>
+                </ul>
+            </li>
+            <li class="gnbAll_tit"><a href="#">성인문해학교</a>
+                <ul>
+                    <li><a href="#">소개</a></li>
+                    <li><a href="#">학사일정</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">자료실</a></li>
+                    <li><a href="#">문해학교앨범</a></li>
+                </ul>
+            </li>
+            <li class="gnbAll_tit"><a href="#">열린공간</a>
+                <ul>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">자주하는질문</a></li>
+                    <li><a href="#">평생학습관에바란다</a></li>
+                    <li><a href="#">정보제공</a>
+                        <ul>
+                            <li><a href="#">독서정보</a></li>
+                            <li><a href="#">이달의 정보</a></li>
+                            <li><a href="#">학습정보</a></li>
+                            <li><a href="#">지역정보</a></li>
+                            <li><a href="#">청렴인물 · 청렴 추천도서</a></li>
+                            <li><a href="#">도서관계 소식</a></li>
+                            <li><a href="#">청렴자료실</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">좌석예약</a>
+                        <ul>
+                            <li><a href="#">디지털자료실좌석예약</a></li>
+                            <li><a href="#">열람실좌석예약현황</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">창의누리터 예약</a></li>
+                    <li><a href="#">발간자료</a></li>
+                    <li><a href="#">설문조사</a></li>
+                    <li><a href="#">평생교육현장실습신청</a></li>
+                </ul>
+            </li>
+            <li class="gnbAll_tit"><a href="#">평생학습관안내</a>
+                <ul>
+                    <li><a href="#">평생학습관현황</a>
+                        <ul>
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">연혁</a></li>
+                            <li><a href="#">조직및담당업무</a></li>
+                            <li><a href="#">자료 및 평생학습 운영 현황</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">평생학습관정책</a>
+                        <ul>
+                            <li><a href="#">전국도서관협력서비스</a></li>
+                            <li><a href="#">서울시교육청협력서비스</a></li>
+                            <li><a href="#">고덕평생학습관특화서비스</a></li>
+                            <li><a href="#">기관홍보영상</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">이용안내</a>
+                        <ul>
+                            <li><a href="#">이용시간및휴관일</a></li>
+                            <li><a href="#">회원가입안내</a></li>
+                            <li><a href="#">시설이용안내</a></li>
+                            <li><a href="#">자료이용안내</a></li>
+                            <li><a href="#">평생학습안내</a></li>
+                            <li><a href="#">이용규정</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">교육청상징</a>
+                        <ul>
+                            <li><a href="#">교육청대표 CI</a></li>
+                            <li><a href="#">교육청도서관 LI</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">오시는길</a></li>
+                    <li><a href="#">비대면자격확인인증</a></li>
+                </ul>
+            </li>
+            <li class="gnbAll_tit"><a href="#">나만의 도서관</a>
+                <ul>
+                    <li><a href="#">내서재</a></li>
+                    <li><a href="#">대출조회및연기</a></li>
+                    <li><a href="#">대출예약확인및취소</a></li>
+                    <li><a href="#">주간대출예약확인및취소</a></li>
+                    <li><a href="#">희망도서신청내역확인및취소</a></li>
+                    <li><a href="#">관심도서내역</a></li>
+                    <li><a href="#">모바일회원증</a></li>
+                    <li><a href="#">책이음 회원신청</a></li>
+                    <li><a href="#">개인공지사항(RSS)</a></li>
+                    <li><a href="#">신청내역</a></li>
+                    <li><a href="#">프로그램신청내역</a></li>
+                    <li><a href="#">문의관리</a></li>
+                    <li><a href="#">회원정보</a></li>
+                    <li><a href="#">회원정보수정</a></li>
+                    <li><a href="#">재동의</a></li>
+                    <li><a href="#">비밀번호변경</a></li>
+                    <li><a href="#">회원탈퇴</a></li>
+                </ul>
+            </li>
+            <li class="gnbAll_tit"><a href="#">기타</a>
+                <ul>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">영상정보처리방침</a></li>
+                    <li><a href="#">이용서비스헌장</a></li>
+                    <li><a href="#">정보공개</a>
+                        <ul>
+                            <li><a href="#">정보공개안내</a></li>
+                            <li><a href="#">정보공개청구</a></li>
+                            <li><a href="#">정보목록</a></li>
+                            <li><a href="#">행정정보공표목록</a></li>
+                            <li><a href="#">정보공개자료실</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">배너모음</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                </ul>
+            </li>
+        </ul><!-- //.gModal_inner -->
+        <button type="button" class="gModal_btn"><i class="fa-regular fa-circle-xmark"></i></button>
+    </div><!-- //.gnbAll_modal -->
+    <header>
+        <div class="wrap">
+            <div class="h_top clearfix">
+                <div class="logo">
+                    <h1><a href="index.html"><img src="img/logo.png" alt="고덕평생학습관"></a></h1>
+                </div><!-- //.logo -->
+
+                <div class="h_search">
+                    <div class="sh_top">
+                        <label>
+                            <input type="search" placeholder="검색어를 입력하세요">
+                            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </label>
+                    </div><!-- //.sh_top -->
+                    <div class="sh_bottom">
+                        <label><input type="radio" name="h_sh" id="data_sh">자료검색</label>
+                        <label><input type="radio" name="h_sh" id="class_sh">강좌검색</label>
+                    </div><!-- //.sh_bottom -->
+                </div><!-- //.search -->
+                <div class="h_nav">
+                    <ul class="clearfix">
+                        <li><a href="#">비대면자격확인인증</a></li>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">개인정보 재동의</a></li>
+                    </ul>
+                </div><!-- //.h_nav -->
+            </div><!-- //.h_top -->           
+        </div><!-- //.wrap -->
+        <div class="h_bottom">
+            <nav class="wrap clearfix">
+                <button type="button" class="gnbAll_btn" title="전체메뉴버튼">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                
+                <ul class="gnb clearfix">
+                    <li>
+                        <a href="#">자료검색</a>
+                        <ul class="sub">
+                            <li><a href="#">자료검색</a></li>
+                            <li><a href="#">스마트도서관</a></li>
+                            <li><a href="#">신착자료검색</a></li>
+                            <li><a href="#">주제별자료검색</a></li>
+                            <li><a href="#">연속간행물목록</a></li>
+                            <li><a href="#">비도서목록</a></li>
+                            <li><a href="#">희망도서신청</a></li>
+                            <li><a href="#">대출베스트</a></li>
+                            <li><a href="#">사서추천도서</a></li>
+                            <li><a href="#">신착자료목록</a></li>
+                            <li><a href="#">특화자료목록</a></li>
+                        </ul><!-- //.sub -->
+                    </li>
+                    <li>
+                        <a href="#">프로그램</a>
+                        <ul class="sub">
+                            <li><a href="#">평생학습관일정</a></li>
+                            <li><a href="#">독서문화행사</a></li>
+                            <li><a href="#">평생교육강좌</a></li>
+                            <li><a href="#">독서동아리</a></li>
+                            <li><a href="#">학습동아리</a></li>
+                            <li><a href="#">지역문화 &#183; 평생학습정보</a></li>
+                            <li><a href="#">전시 &#183; 갤러리</a></li>
+                            <li><a href="#">독서퀴즈 이벤트</a></li>
+                        </ul><!-- //.sub -->
+                    </li>
+                    <li>
+                        <a href="#">성인문해학교</a>
+                        <ul class="sub">
+                            <li><a href="#">소개</a></li>
+                            <li><a href="#">학사일정</a></li>
+                            <li><a href="#">공지사항자료실</a></li>
+                            <li><a href="#">문해학교앨범</a></li>
+                        </ul><!-- //.sub -->
+                    </li>
+                    <li>
+                        <a href="#">열린공간</a>
+                        <ul class="sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">자주하는질문</a></li>
+                            <li><a href="#">평생학습관에바란다</a></li>
+                            <li><a href="#">정보제공</a></li>
+                            <li><a href="#">좌석예약</a></li>
+                            <li><a href="#">창의누리터 예약</a></li>
+                            <li><a href="#">발간자료</a></li>
+                            <li><a href="#">설문조사</a></li>
+                            <li><a href="#">평생교육현장실습신청</a></li>
+                        </ul><!-- //.sub -->
+                    </li>
+                    <li>
+                        <a href="#">평생학습관안내</a>
+                        <ul class="sub">
+                            <li><a href="#">평생학습관현황</a></li>
+                            <li><a href="#">평생학습관정책</a></li>
+                            <li><a href="#">이용안내</a></li>
+                            <li><a href="#">교육청상징</a></li>
+                            <li><a href="#">오시는길</a></li>
+                            <li><a href="#">비대면자격확인인증</a></li>
+                        </ul><!-- //.sub -->
+                    </li>
+                    <li>
+                        <a href="#">나만의도서관</a>
+                        <ul class="sub">
+                            <li><a href="#">내서재</a></li>
+                            <li><a href="#">개인공지사항(RSS)</a></li>
+                            <li><a href="#">신청내역</a></li>
+                            <li><a href="#">문의관리</a></li>
+                            <li><a href="#">회원정보</a></li>
+                        </ul><!-- //.sub -->
+                    </li>
+                </ul>
+            </nav>
+        </div><!-- //.h_bottom -->
+    </header>
+    
+    <section class="main_visual">
+        <h2 class="blind"><span>슬라이드</span></h2>
+        <div class="mv_txt wrap">
+            <p>책! 책! 책! 책을 읽읍시다! <br> 서울특별시교육청 전자도서관 서비스</p>
+            <strong><span>See</span> 해보세요</strong>
+        </div>
+    </section>
+    <section class="list">
+        <div class="wrap clearfix">
+            <h2 class="blind"><span>리스트</span></h2>
+            <div class="listBest">
+                <div class="listBest_ri">
+                    <em>이달의 대출목록</em>
+                    <h4>사서<br>추천도서</h4>
+                    <a href="#"><span>목록 더보기 <i class="fa-solid fa-angle-right"></i></span></a>
+                </div><!-- //.listBest_ri -->
+                <div class="listBest_le">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="#">
+                            <div class="list_img"><img src="img/list_book_img1.jpg" alt=""></div>
+                            <div class="list_txt"><!-- //.list_img -->
+                                <span>지루함의심리학</span>
+                                <p>저자 : 제임스 댄커트,존 D</p>
+                            </div><!-- //.list_txt -->
+                        </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <div class="list_img"><img src="img/list_book_img2.jpg" alt=""></div><!-- //.list_img -->
+                            <div class="list_txt">
+                                <span>낭만적 은둔의 역사</span>
+                                <p>저자 : 데이비드 빈센트</p>
+                            </div><!-- //.list_txt -->
+                        </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <div class="list_img"><img src="img/list_book_img3.jpg" alt=""></div><!-- //.list_img -->
+                            <div class="list_txt">
+                                <span>라디오 탐심  </span>
+                                <p>저자 : 김형호</p>
+                            </div><!-- //.list_txt -->
+                        </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <div class="list_img"><img src="img/list_book_img4.jpg" alt=""></div><!-- //.list_img -->
+                            <div class="list_txt">
+                                <span>티라노사우루수나</span>
+                                <p>저자 : 김래연</p>
+                            </div><!-- //.list_txt -->
+                        </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <div class="list_img"><img src="img/list_book_img5.jpg" alt=""></div><!-- //.list_img -->
+                            <div class="list_txt">
+                                <span>도서. 쇼핑의 미래는 누가 디자인할까? : 10대가 알아야 할 마케팅의 모든 것!</span>
+                                <p>저자 : 황지영</p>
+                            </div><!-- //.list_txt -->
+                        </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <div class="list_img"><img src="img/list_book_img6.jpg" alt=""></div><!-- //.list_img -->
+                            <div class="list_txt">
+                                <span>감정을 파는 소년 : 청소년 성장소설 십대들의 힐링캠프, 소망</span>
+                                <p>저자 : 김수정</p>
+                            </div><!-- //.list_txt -->
+                            </a>
+                        </li>
+                    </ul>
+                </div><!-- //.listBest_le -->
+            </div><!-- //.listBest -->
+        </div><!-- //.wrap -->
+    </section>
+    <section class="notice wrap">
+        <h2 class="blind"><span>공지사항</span></h2>
+        <div class="noteList clearfix">           
+            <h3 class="note_tit on">공지사항</h3>
+            <ul class="note_bottom on clearfix">
+                <li>
+                    <a href="#">
+                        <em>공지사항</em>
+                        <strong>제 19차 희망도서 처리 결과 안내</strong>
+                        <p>2022년 제19차 희망도서 처리 결과를 첨부파일과 같이 안내해드리니 참고해주시기 바랍니다. </p>
+                        <span><i class="fa-regular fa-bell"></i> 2022 - 05 - 19</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <em>공지사항</em>
+                        <strong>제 19차 희망도서 처리 결과 안내</strong>
+                        <p>2022년 제19차 희망도서 처리 결과를 첨부파일과 같이 안내해드리니 참고해주시기 바랍니다. </p>
+                        <span><i class="fa-regular fa-bell"></i> 2022 - 05 - 19</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <em>공지사항</em>
+                        <strong>제 19차 희망도서 처리 결과 안내</strong>
+                        <p>2022년 제19차 희망도서 처리 결과를 첨부파일과 같이 안내해드리니 참고해주시기 바랍니다. </p>
+                        <span><i class="fa-regular fa-bell"></i> 2022 - 05 - 19</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <em>공지사항</em>
+                        <strong>제 19차 희망도서 처리 결과 안내</strong>
+                        <p>2022년 제19차 희망도서 처리 결과를 첨부파일과 같이 안내해드리니 참고해주시기 바랍니다. </p>
+                        <span><i class="fa-regular fa-bell"></i> 2022 - 05 - 19</span>
+                    </a>
+                </li>
+            </ul>
+
+            <h3 class="note_tit">독서문화</h3>
+            <ul class="note_bottom clearfix">
+                <li>
+                    <a href="#">
+                        <em>독서문화</em>
+                        <strong>2022년 이야기가 있는 코딩</strong>
+                        <p>2022년 [어린이날 100주년기념] 읽기-상상하기-만들기 이야기가 있는 코딩 신청기간 안내드립니다.</p>
+                        <span><i class="fa-regular fa-bell"></i> 2022 - 05 - 03</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <em>독서문화</em>
+                        <strong>2022년 이야기가 있는 코딩</strong>
+                        <p>2022년 [어린이날 100주년기념] 읽기-상상하기-만들기 이야기가 있는 코딩 신청기간 안내드립니다.</p>
+                        <span><i class="fa-regular fa-bell"></i> 2022 - 05 - 03</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <em>독서문화</em>
+                        <strong>2022년 이야기가 있는 코딩</strong>
+                        <p>2022년 [어린이날 100주년기념] 읽기-상상하기-만들기 이야기가 있는 코딩 신청기간 안내드립니다.</p>
+                        <span><i class="fa-regular fa-bell"></i> 2022 - 05 - 03</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <em>독서문화</em>
+                        <strong>2022년 이야기가 있는 코딩</strong>
+                        <p>2022년 [어린이날 100주년기념] 읽기-상상하기-만들기 이야기가 있는 코딩 신청기간 안내드립니다.</p>
+                        <span><i class="fa-regular fa-bell"></i> 2022 - 05 - 03</span>
+                    </a>
+                </li>
+            </ul>
+
+            <h3 class="note_tit">평생교육</h3>
+            <ul class="note_bottom clearfix">
+                <li>
+                    <a href="#">
+                        <em>평생교육</em>
+                        <strong>2022년 역량개발과정 연수 등록</strong>
+                        <p>2022년 역량개발과정 연수 등록(교육대상자에 한함) 접수 및 강의기간 날짜 안내드립니다.</p>
+                        <span><i class="fa-regular fa-bell"></i> 2022 - 05 - 03</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <em>평생교육</em>
+                        <strong>2022년 역량개발과정 연수 등록</strong>
+                        <p>2022년 역량개발과정 연수 등록(교육대상자에 한함) 접수 및 강의기간 날짜 안내드립니다.</p>
+                        <span><i class="fa-regular fa-bell"></i> 2022 - 05 - 03</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <em>평생교육</em>
+                        <strong>2022년 역량개발과정 연수 등록</strong>
+                        <p>2022년 역량개발과정 연수 등록(교육대상자에 한함) 접수 및 강의기간 날짜 안내드립니다.</p>
+                        <span><i class="fa-regular fa-bell"></i> 2022 - 05 - 03</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <em>평생교육</em>
+                        <strong>2022년 역량개발과정 연수 등록</strong>
+                        <p>2022년 역량개발과정 연수 등록(교육대상자에 한함) 접수 및 강의기간 날짜 안내드립니다.</p>
+                        <span><i class="fa-regular fa-bell"></i> 2022 - 05 - 03</span>
+                    </a>
+                </li>
+            </ul>
+            <a href="#" class="more_btn"><img src="img/more_btn.png" alt=""></a>
+        </div><!-- //.noteList -->
+    </section>
+    <section class="popup_zone">
+        <h2 class="blind"><span>팝업존</span></h2>
+        <div class="wrap clerarfix ">
+            <div class="popup cont_le clerarfix">
+                <div class="tit_top clearfix">
+                    <h4>팝업존</h4>
+                    <a href="#" class="more_btn"><img src="img/img/more_btn.png" alt=""></a>
+                </div><!-- //.tit_top -->
+                <ul>
+                    <li><a href="#"><img src="img/popupZone_img1.png" alt="가족백일장"></a></li>
+                    <li><a href="#"><img src="img/popupZone_img2.png" alt="거리두기해제 이용안내"></a></li>
+                </ul>
+            </div><!-- //.popup_le -->
+            <div class="cont_ri clearfix">
+                <div class="calendar">
+                    <div class="header">
+                        <button class="calendar_btn" onclick="prevCal();"><i class="fa-solid fa-angle-left"></i></button>
+                        <div class="title"><span class="year"></span><span class="month"></span></div>
+                        <button class="calendar_btn" onclick="nextCal();"><i class="fa-solid fa-angle-right"></i></button>
+                    </div><!-- //.header -->
+                    <div class="day">
+                        <div>SUN</div>
+                        <div>MON</div>
+                        <div>TUE</div>
+                        <div>WED</div>
+                        <div>THU</div>
+                        <div>FRI</div>
+                        <div>SAT</div>
+                    </div><!-- //.day -->
+                    <div class="dates"></div><!-- //.dates -->
+                </div><!-- //.calendar -->
+                <!-- <input type="text" id="period_1"> ~ <input type="text" id="period_2"> -->
+            </div><!-- //.calendar_ri -->
+        </div>
+    </section>
+    <section class="event wrap clearfix">
+        <h2 class="blind"><span>이벤트</span></h2>
+        <div class="movie cont_le clearfix">
+            <div class="tit_top clearfix">
+                <h4>영화상영</h4>
+                <a href="#" class="more_btn"><img src="img/img/more_btn.png" alt=""></a>
+            </div><!-- //.tit_top -->
+            <div>
+                <div class="img_le"><img src="img/movie_img1.jpg" alt="얼음왕국"></div><!-- //.img_le -->
+                <div class="txt_ri">
+                    <a href="#">
+                        <strong>얼음왕국 : 북금 여름의 이야기</strong>
+                        <p>22 - 06 - 08 14:00</p>
+                    </a>
+                </div><!-- //.txt_ri -->
+            </div>
+        </div><!-- //.movie_le -->
+
+            <div class="eventList cont_ri">
+                <div class="tit_top clearfix">
+                    <h4>행사일정</h4>
+                    <a href="#" class="more_btn"><img src="imgimg/img/more_btn.png" alt=""></a>
+                </div><!-- //.tit_top -->
+                <ul class="clearfix">
+                    <li><a href="#"><img src="img/event_img1.png" alt="글과 노니는 아이들"></a></li>
+                    <li><a href="#"><img src="img/event_img2.png" alt="이야기가 있는 코딩"></a></li>
+                    <li><a href="#"><img src="img/event_img3.png" alt="6월 이벤트"></a></li>
+                </ul>
+            </div><!-- //.eventList_ri -->
+    </section>
+    <section class="service">
+        <h2 class="blind"><span>자주찾는 서비스</span></h2>
+        <div class="sv_top wrap">
+            <h4>자주찾는 서비스</h4>
+            <ul class="clearfix">
+                <li><a href="#"><img src="img/sv_icon1.png" alt="이용안내"></a></li>
+                <li><a href="#"><img src="img/sv_icon2.png" alt="모바일회원증"></a></li>
+                <li><a href="#"><img src="img/sv_icon3.png" alt="평생교육강좌신청(에버러닝)"></a></li>
+                <li><a href="#"><img src="img/sv_icon4.png" alt="희망도서신청"></a></li>
+                <li><a href="#"><img src="img/sv_icon5.png" alt="개인정보재동의"></a></li>
+                <li><a href="#"><img src="img/sv_icon6.png" alt="평생학습관에바란다"></a></li>
+            </ul>
+        </div>
+        <div class="sv_bottom wrap">
+            <h5>내가 원하는 정보를 한눈에</h5>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="img/sv_b_icon1.png" alt="전자도서관">
+                        <span>전자도서관</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/sv_b_icon2.png" alt="사서에게물어보세요">
+                        <span>사서에게물어보세요</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/sv_b_icon3.png" alt="알람실예약현황">
+                        <span>알람실예약현황</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/sv_b_icon4.png" alt="에버러닝">
+                        <span>에버러닝</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/sv_b_icon5.png" alt="책바다">
+                        <span>책바다</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/sv_b_icon6.png" alt="디지털실예약">
+                        <span>디지털실예약</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="sns wrap">
+        <h2 class="blind"><span>SNS</span></h2>
+        <div class="sns_top clearfix">
+            <h4>고덕평생학습관 SNS</h4>
+            <ul class="clearfix">
+                <li><a href="#"><img src="img/sns_icon_youtube.png" alt="유튜브바로가기"></a></li>
+                <li><a href="#"><img src="img/sns_icon_blog.png" alt="유튜브바로가기"></a></li>
+                <li><a href="#"><img src="img/sns_icon_insta.png" alt="유튜브바로가기"></a></li>
+            </ul>
+        </div><!-- //.sns_top -->
+        <div class="sns_bottom">
+            <ul class="clearfix">
+                <li><a href="#"><img src="img/sns_youtube_img.jpg" alt="유튜브 미리보기"></a></li>
+                <li><a href="#"><img src="img/sns_blog_img.jpg" alt="블로그 미리보기"></a></li>
+                <li><a href="#"><img src="img/sns_insta.png" alt="인스타 미리보기"></a></li>
+            </ul>
+        </div><!-- //.sns_bottom -->
+    </section>
+    <footer>
+        <div class="f_banner wrap">
+            <div class="swiper mySwiper">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide"><img src="img/banner1.png" alt="배너1"></li>
+                    <li class="swiper-slide"><img src="img/banner2.png" alt="배너2"></li>
+                    <li class="swiper-slide"><img src="img/banner3.png" alt="배너3"></li>
+                    <li class="swiper-slide"><img src="img/banner4.png" alt="배너4"></li>
+                    <li class="swiper-slide"><img src="img/banner5.png" alt="배너5"></li>
+                    <li class="swiper-slide"><img src="img/banner6.png" alt="배너6"></li>
+                    <li class="swiper-slide"><img src="img/banner7.png" alt="배너7"></li>
+                    <li class="swiper-slide"><img src="img/banner8.png" alt="배너8"></li>
+                    <li class="swiper-slide"><img src="img/banner9.png" alt="배너9"></li>
+                    <li class="swiper-slide"><img src="img/banner10.png" alt="배너10"></li>
+                    <li class="swiper-slide"><img src="img/banner11.png" alt="배너11"></li>
+                    <li class="swiper-slide"><img src="img/banner12.png" alt="배너12"></li>
+                </ul>
+            </div><!-- //.swiper mySwiper -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div><!-- //.f_banner -->
+        <div class="f_bg_gray">
+            <div class="f_top f_wrap clearfix">
+                <div class="ft_info">
+                    <ul class="clearfix">
+                        <li><a href="#">정보공개알림</a></li>
+                        <li><a href="#" class="orange_txt">개인정보처리방침</a></li>
+                        <li><a href="#">행정서비스현장</a></li>
+                        <li><a href="#">이용규정</a></li>
+                        <li><a href="#">이메일무단수집거부</a></li>
+                        <li><a href="#">전화번호안내</a></li>
+                        <li><a href="#">오시는길</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                    </ul>
+                </div><!-- //.ft_info -->
+                <div class="siteLink">
+                    <select>
+                        <option>타기관 바로가기</option>
+                        <option value="#">통합도서관</option>
+                        <option value="#">전자도서관</option>
+                        <option value="#">사서추천도서포털</option>
+                        <option value="#">평생학습포털(에버러닝)</option>
+                        <option value="#">고덕평생학습관</option>
+                        <option value="#">노원평생학습관</option>
+                        <option value="#">마포평생학습관</option>
+                        <option value="#">마포평생학습관 아현분관</option>
+                        <option value="#">영등포평생학습관</option>
+                        <option value="#">강남도서관</option>
+                        <option value="#">강동도서관</option>
+                        <option value="#">강서도서관</option>
+                        <option value="#">개포도서관</option>
+                        <option value="#">고척도서관</option>
+                        <option value="#">구로도서관</option>
+                        <option value="#">남산도서관</option>
+                        <option value="#">도봉도서관</option>
+                        <option value="#">동대문도서관</option>
+                        <option value="#">동작도서관</option>
+                        <option value="#">서대문도서관</option>
+                        <option value="#">송파도서관</option>
+                        <option value="#">양천도서관</option>
+                        <option value="#">어린이도서관</option>
+                        <option value="#">용산도서관</option>
+                        <option value="#">정독도서관</option>
+                        <option value="#">종로도서관</option>
+                        <option value="#">서울교육박물관</option>
+                    </select>
+                </div><!-- //.siteLink -->
+            </div><!-- //.f_top -->
+
+            <div class="f_bottom f_wrap clearfix">
+                <div class="fb_adress">
+                    <ul class="clearfix">
+                        <li>(우) 05225 서울 강동구 고덕로 295 (고덕동,고덕평생학습관)</li>
+                        <li class="blue_txt">대표전화 02 - 9602 - 2600</li>
+                        <li><span> &#47; </span>팩스번호 02 - 9602 - 2680 </li>
+                        <li><span> &#47; </span>E-Mail gdlc@sen.go.kr</li>
+                        <li class="copy_txt">Copyright © 2022 Ham DaBin. All Rights Reserved.</li>
+                    </ul>
+                </div><!-- //.fb_adress -->
+                <div class="f_logo"><a href="index.html"><img src="img/logo_w.png" alt="고덕도서관로고"></a></div><!-- //.f_logo -->
+            </div><!-- //.f_bottom -->
+            
+        </div><!-- //.f_bg_gray -->
+    </footer>
+</body>
+</html>

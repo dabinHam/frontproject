@@ -1,0 +1,167 @@
+@charset "utf-8";
+/* 라이트모드,다크모드 */
+
+:root[color-theme='light'] {
+    --background: #FCFBFF;
+    --color: #041B29;
+    --bgimg: url(../imges/logo.png)no-repeat left center/contain;
+  }
+  
+  :root[color-theme='dark'] {
+    --background: #101926; 
+    --color: #EAEBE4;
+    --bgimg: url(../imges/logo_w.png)no-repeat left center/contain;
+  }
+
+html{
+    background: var(--background);
+}
+.themed{color: var(--color);}
+.cont2 ul li b{color: var(--color);}
+header .h_inner nav.h_menu ul li a{color: var(--color);}
+.quick_menu .qMenu_list li a{color: var(--color);}
+/* header .h_inner .logo{background: var(--bgimg);} */
+.quick_menu .qMenu_list li:hover a{background: var();}
+
+/* 테마버튼 */
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+
+}
+
+/* .mode_btn {
+    display: block;
+    width: 80px;
+    height: 80px;
+     background: url(../imges/modeD_icon.png);
+    position: fixed;
+    right: 33px;
+    top: 10px;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+}
+ */
+
+.check{
+    display: block;
+    width: 80px;
+    height: 80px;
+     background: url(../imges/modeD_icon.png) no-repeat left center/contain;
+    position: fixed;
+    right: 2%;
+    bottom: 30px;
+    overflow: hidden;
+    transition: ease-in 0.1s;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+input[type="checkbox"]:checked ~ .check{
+    background: url(../imges/modeL_icon.png) no-repeat left center/contain;
+}
+/* @media screen and (min-width:1320px) and (max-width:1920px) {
+
+} */
+@media screen and (max-width:1320px) {
+    .wrap{ width: 1040px;}
+    .cont1 .c1_inner .ri_bt p{font-size: 20px;}
+    .quick_menu .qMenu_btn{width: 54px; height: 54px;}
+}
+@media screen and (max-width:1080px) {
+    .wrap{width: 90%;}
+}
+@media screen and (max-width:1024px) {
+    .wrap{ width: 820px;}
+    .check{width: 60px; height: 60px;}
+    section{ padding-top: 71px; padding-bottom: 71px;}
+    header .h_inner .logo{width: 133px; height: 43px;}
+    header .h_inner nav.h_menu ul li a{font-size: 20px;}
+    .main_visual .mainV_inner{padding-top: 71px; padding-bottom: 71px;}
+    .main_visual .mainV_inner h2{font-size: 80px;}
+    .main_visual .mainV_inner b{font-size: 40px;}
+    .main_visual .mainV_inner em,strong{font-size: 32px;}
+    .cont1 .c1_inner .ri_bt p{font-size: 20px; line-height: 28px;}
+    .cont1 .c1_inner .ri_t{top: 15%;}
+    .cont2 ul li p{font-size: 18px;}
+    .cont3 .swiper-slide .hover_box .ho_txt{width: 30%; font-size: 16px; margin-top: 15%;}
+}
+@media screen and (max-width:848px) {
+    .wrap{width: 90%;}
+    .cont1 .c1_inner .ri_t{top: 10%;}
+
+    .cont4 i{ font-size: 34px;}
+}
+@media screen and (max-width:767px) {
+    .wrap{ width: 534px;}
+    .check{width: 44px; height: 44px;}
+    .nav-up {
+        top: -134px; 
+    }
+    section{ padding-top: 48px; padding-bottom: 48px;}
+    header{}
+    header .h_inner{flex-direction: column; margin-top: 5%;}
+    header .h_inner .logo{width: 89px; height: 20px; padding-top: 8%;}
+    header .h_inner nav.h_menu{display: none; }
+    header .h_inner nav.h_menu ul{justify-content: space-between;}
+    header .h_inner nav.h_menu ul li a{font-size: 18px;}
+    .main_visual{}
+    .main_visual .mainV_inner{padding-top: 48px; padding-bottom: 48px;}
+    .main_visual .mainV_inner h2{font-size: 60px;}
+    .main_visual .mainV_inner b{font-size: 30px;}
+    .main_visual .mainV_inner em,strong{font-size: 28px; }
+    .cont1 .c1_inner .ri_bt p{font-size: 16px; line-height: 22px;}
+    .cont1 .c1_inner .ri_t b,.ri_bt p{font-size: 18px;}
+    .cont1 .c1_inner .ri_t{top: 0; font-size: 16px; line-height: 20px;}
+    .cont2 ul li p{font-size: 16px; line-height: 26px;}
+    .cont2 ul li .graph{height: 20px;}
+    .cont2 ul li .graph span{height: 20px; line-height: 20px;}
+    .cont4 i{ font-size: 30px;}
+    .cont4 .top_txt span p{font-size: 16px;}
+    .cont3 .swiper-button-next{right: -1%;}
+    .cont3 .swiper-button-next i{font-size: 6vh;}
+    .cont3 .swiper-button-prev{left: -1%;}
+    .cont3 .swiper-button-prev i{font-size: 6vh;}
+    .cont3 .swiper-slide .hover_box .ho_txt{width: 50%; font-size: 14px; margin-top: 20%; margin-left: 30%;}
+    
+}
+/* @media screen and (max-width:560px){
+    .wrap{width: 92%;}
+} */
+
+@media screen and (max-width:540px) {
+    .wrap{ width: 360px;}
+    .check{width: 38px; height: 38px;}
+    h2{font-size: 38px;}
+    section{ padding-top: 32px; padding-bottom: 32px;}
+    header .h_inner .logo{width: 89px; height: 20px;}
+    header .h_inner nav.h_menu{width: 100%;}
+    .main_visual .mainV_inner{padding-top: 32px; padding-bottom: 32px;}
+    .main_visual .mainV_inner h2{font-size: 40px;}
+    .main_visual .mainV_inner b{font-size:28px;}
+    .main_visual .mainV_inner em,strong{font-size: 20px; }
+    .cont1 .c1_inner .ri_bt p{font-size: 14px; }
+    .cont1 .c1_inner .ri_bt{width: 100%; left: 0; top: 110%; }
+    .cont2{padding-top: 100px;}
+    .cont2 ul li b{font-size: 20px;}
+    .cont2 ul li p{font-size: 14px;}
+    footer p{font-size: 11px;}
+    .quick_menu .qMenu_btn{width: 42px; height: 42px;}
+    .quick_menu .qMenu_btn img{width: 60%;}
+    .cont3 .swiper-button-next{right: -2%;}
+    .cont3 .swiper-button-next i{font-size: 5vh;}
+    .cont3 .swiper-button-prev{left: -2%;}
+    .cont3 .swiper-button-prev i{font-size: 5vh;}
+    .cont3 .swiper-slide .hover_box .ho_txt{width: 80%; font-size: 14px; margin-top: 30%; margin-left: 25%;}
+}
+
+@media screen and (max-width:413px){
+    .wrap{ width: 90%;}
+    h2{font-size: 32px;}
+    
+}
+
+@media screen and (max-width:380px){
+    header .h_inner nav.h_menu ul li a{font-size: 16px;}
+}

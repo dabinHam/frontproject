@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'walterregular';
+  src: url('../fonts/walter__-webfont.woff2') format('woff2'),
+       url('../fonts/walter__-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}

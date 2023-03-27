@@ -1,0 +1,147 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+/*  
+    font-family: 'Orbitron', sans-serif; 
+    font-family: 'walterregular';
+*/
+
+
+/* ===reset=== */
+*{margin: 0; padding: 0;}
+ul,ol,li{list-style: none;}
+a{text-decoration: none;}
+body{background: #efefef;}
+
+/* ===header=== */
+
+header {
+    width: 400px; height: 100%;
+    /* background: linear-gradient(45deg, aqua , royalblue); */
+    background: url(../img/h_bg.png)no-repeat center center / cover;
+    position: fixed; left: 0; top: 0;
+}
+header h1{
+    position: absolute; left: 5%; top: 90%; 
+    transform: translateY(-150%);
+    text-align: center;
+    opacity: 0.8;
+}
+header h1 b {
+    font: 60px/1.2 'walterregular';
+    display: block;
+    background: linear-gradient(45deg, #ffffff, #d1e3ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 8px;
+    
+}
+
+header h1 span {
+    display: block;
+    font: bold 14px/1.2 'Orbitron', sans-serif; letter-spacing: 2px;
+    background: linear-gradient(45deg, #ffffff, #d1e3ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* header h1::before{
+    content: 'S T U D I O';
+    display: block;
+    font: 14px/1.2 'Orbitron', sans-serif; color: #fff;
+    letter-spacing: 2px;
+    position: absolute; left: 10%; top: 150px;
+    opacity: 0.8;
+} */
+/* header h1::after{
+    content: '';
+    display: block;
+    width: 150px; height: 2px;
+    background: #fff;
+    margin-top: 20px;
+} */
+header ul{position: absolute; left: 40px; bottom: 100px;}
+header ul li{float: left; margin-right: 10px;}
+header ul li a{font-size: 20px; color: #fff;}
+header ul li a span{ display: inline-block; font-weight: bold; opacity: 0.7; transform: scale(0.7) translateX(-10px);}/* transform효과를 같이 쓰려면 같이써줘야함. 만약 transform: scale(0.7); transform:translateX(-10px); 이렇게하면 뒤에있는 애만 적용됨. */
+
+
+/* ===main=== */
+
+main{/* width값을 주지 않지만 header의 width값만큼 margib-left를 주고 padding으로 여백을준다 !너비값없이 여백을주면 자동으로 계산됨 */
+    margin-left: 400px;
+    box-sizing: border-box;
+    padding: 20px 20px 198px 20px;
+    background: url(../img/main_bg3.gif) no-repeat left/cover;
+}
+main ul{width: 100%; margin-bottom: 10px; margin-right: 20px;}
+main ul::after{content: ''; display: block; clear: both;}
+main ul li{float: right; margin-right: 20px; width: 100px; height: 26px; text-transform: uppercase;}
+main ul li a{
+    display: block; width: 100%; height: 100%;
+    font: bold 7px/26px 'Orbitron', sans-serif;
+    color: #aaa; text-align: center; letter-spacing: 1px;
+    border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); background: #fff;
+}
+main ul li.on a{
+    background: linear-gradient(45deg, #456fe4, #98b5e2);
+    box-shadow: 0 5px 20px rgba(0, 17, 255, 0.527); color: #fff;
+}
+main section{width: 100%;}
+main section::after{ content: ''; display: block; clear: both; } /* article에 float을 줄꺼라서 clearfix처럼 만들어줌 */
+main section article{width: 20%; float: left; box-sizing: border-box; padding: 12px;}
+main section article div{width: 100%;height: 100%; background: rgba(255, 255, 255, 0.747); border-radius: 4px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); box-sizing: border-box; padding: 14px;}/* boxshoadow: x축 y축 blur 색상 */
+main section article div img{width: 100%;}
+main section article div h2{margin-top: 15px; font: bold 11px/1 'Orbitron', sans-serif;
+letter-spacing: 1px; color: #444; margin-bottom: 5px;}/* font:font-weight font-size/line-height 'fontfamily' */
+main section article div p{font: 10px/1.2 'arial'; color: #777; margin-bottom: 15px;}
+main section article:hover div{transform: scale(1.1); transition: all 0.6s;}
+
+/* 위에서 부른상태로 불러야 설정값이 먹음. 다르게 부르면 위에서 불러온 클래스가 더 레벨이 높다고 생각되기때문에 설정값이 적용안됨 */
+@media screen and (max-width:1599px) {
+    header{width: 350px;}
+    main{margin-left: 350px;} 
+    main section article{width: 25%;}   
+}
+
+@media screen and (max-width:1199px) {
+    header{width: 100%; height: 100px; position: relative; background: #000;}
+    header h1{transform: translateY(-120%);}
+    header h1 b{font: 36px/1.2 'walterregular'; display: inline-block;}
+    header h1 span{display: inline-block;}
+    header h1::before, header h1::after{display: none;}
+    header ul{left: 83%; bottom: 25px;}/* 위에서 left,bottom을 사용했으면 여기서도 똑같이 사용해야합니다. */
+    header ul li{margin-right: 20px;}
+    header ul li a{font-size: 20px;}
+    header ul li a span{display: none;}
+    main{width: 100%; margin-left: 0;}
+    main section article{width: 25%;}
+}
+
+@media screen and (max-width:899px) {
+    header ul{left: 80%;}
+    main section article{ width: 33.33%;}
+}
+
+@media screen and (max-width:755px) { /* 가끔 꼬이는 경우가있어서 만들어줌 ex) sns icon들이 아래로 떨어지는경우  */
+    header ul{left: 75%;}
+}
+
+
+@media screen and (max-width:679px) {
+    header ul{left: 70%;}
+    main section article{ width: 50%;}
+}
+
+@media screen and (max-width:630px){
+    header ul{display: none;}
+}
+
+@media screen and (max-width:539px) {
+    
+    main ul{
+        margin-right: 0; box-sizing: border-box;
+        padding: 0 13px;
+    }
+    main ul li{margin-right: 2%; width: 32%;}
+    main ul li:nth-of-type(1){margin-right: 0%;}
+    main section article{ width: 100%;}
+}

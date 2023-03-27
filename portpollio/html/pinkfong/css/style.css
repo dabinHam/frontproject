@@ -1,0 +1,137 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Play:wght@400;700&display=swap');
+/* font-family: 'Permanent Marker', cursive;
+font-family: 'Play', sans-serif; */
+
+/* reset css */
+* {margin: 0; padding: 0;}
+ol,ul {list-style: none;}
+a {outline: 0; text-decoration: none; color: #bbb;}
+img{border: 0;}
+body{position: fixed; width: 100%; height: 100%; background: #111;}
+
+.vid{position: fixed; width: 100%; height: 100%; top: -60px; left: 0; opacity: 0.9;}
+.vid video{width: 100%; min-width: 1600px;}
+
+h1{position: fixed; top:40px; left: 40px; z-index: 10;}
+h1 img{width: 280px; height: auto;}
+header{
+    width: 800px; height: 500px; position: fixed; 
+    background: linear-gradient(-45deg, #ffa52e, #ff5aa7, #ff66af);
+    border-radius: 20%;
+    transform: skewX(-30deg);
+    left: -420px; top: 0;
+    }
+/* 1depth */
+#gnb {width: 220px; position: absolute; top: 150px; right: 0;}
+#gnb>li{position: relative;}
+#gnb>li>a{display: block; width: 220px; height: 50px;
+        font:bold 18px/3 'Play', sans-serif; color: #222;
+        box-sizing: border-box; padding-right: 40px; text-align: right;
+}
+#gnb>li.on>ul>li{opacity: 0;}
+#gnb>li.on:hover ul>li{opacity: 0.8;}
+#gnb>li.on>a{background: #111; color: #fff;}
+#gnb>li:hover>a{background: #111; color: #fff;}
+#gnb em{display: inline-block; transform: skewX(40deg)!important;
+}
+#gnb em i{margin-right: 20px;}
+/* 2depth */
+#gnb ul{
+    position: absolute; left: 0;top: 0; 
+    opacity: 0; transition: all 0.4s;
+}
+#gnb>li:hover ul{opacity: 0.8; left: 205px;}
+#gnb ul a{
+    display: block; width: 150px; height: 40px;
+    background: #222; border-bottom: 1px solid #ff5aa7; font:bold 16px/2.5 arial; color: #fff; box-sizing: border-box;
+padding-left: 50px; margin-bottom: 3px; transition: all 0.5s;}
+#gnb ul a:hover{background: #ff5aa7; color: #333;}
+#gnb>li.on ul{opacity: 0.8; left: 205px;}
+#gnb>li.on ul a{background: #444; opacity: 0.7;}
+
+/* 텍스트박스 */
+.txtBox{
+    width: 700px; height: 280px; 
+    position: fixed; bottom: 100px; left: 70px; 
+}
+.txt{
+    position: absolute; top: 0; left: 0; 
+    font-size: 50px; color: #ff5aa7; letter-spacing: -2px; font-family: 'Permanent Marker', cursive;
+}
+.tit{
+    position: absolute; top: 30px; left: 0; 
+    font-size: 60px; color: #ff5aa7; letter-spacing: -1px;
+    font-family: 'Permanent Marker', cursive;  
+}
+
+/* contents */
+#side{
+    width: 400px; height: 100%; 
+    position: fixed; bottom: 0; right: -350px;
+    background: #111; 
+    opacity: 0.5; transition: all 0.5s;}
+#side:hover{right: 0; opacity: 0.8;}
+#side .con{
+    width: 400px; height: 100%; 
+    position: absolute; left: 150px; bottom: 0; 
+    background: #000; 
+    box-sizing: border-box; padding: 10px; transition: all 1s;
+}
+#side:hover .con{left: 60px;}
+#side .con p{
+    width: 300px; height: auto; 
+    position: absolute; left: 50px;
+}
+#side .con p em{
+    display: inline-block; 
+    font:bold 16px/1.7 arial; color: #ff5aa7; 
+    font-style: normal;
+}
+#side .con p img{
+    width: 300px; height: 200px; 
+    opacity: 0.6; transition: all 0.5s;
+}
+#side .con p img:hover{opacity: 1;}
+#side .con p:nth-child(1){bottom: 550px; transform: translateX(200px); 
+    transition: all 0.4s;}
+#side .con p:nth-child(2){bottom: 300px; transform: translateX(200px);
+    transition: all 0.8s;}
+#side .con p:nth-child(3){bottom: 50px; transform: translateX(200px);
+    transition: all 1.2s;
+}
+#side:hover .con p{transform: translateX(0);}
+
+/* sns 버튼 모음 */
+#side #sns{margin-top: 650px; margin-left: -25px; opacity: 0;}
+#side:hover #sns{
+    opacity: 0.8; transition: all 0.5s;
+    transform: translateX(50px);
+}
+#sns li{margin-bottom: 30px;}
+#sns .fa{font-size: 25px; color: #ff5aa7; opacity: 0.5; transform: scale(1);
+transition: all 0.5s;}
+#sns .fa:hover{opacity: 1; transform: scale(1.4);}
+
+/* 자동 롤링 버튼 */
+#side .btnContents{
+    width: 150px; height: 50px; 
+    position: absolute; bottom: 50%; left: -30px; 
+    color: #ff5aa7;
+}
+#side:hover .btnContents{left: 700px;}
+.btnContents i{
+    font-size: 60px; 
+    position: absolute; bottom: 0; right: 0;
+    opacity: 1;
+    }
+.btnContents i:nth-child(1){animation: ani linear 1.5s 0s infinite;}
+.btnContents i:nth-child(2){animation: ani linear 1.5s 0.5s infinite;}
+.btnContents i:nth-child(3){animation: ani linear 1.5s 1.0s infinite;}
+
+/* animation : 이름 linear 1.5s 딜레이시간 무한반복(infinite) */
+
+@keyframes ani{
+    0%{right: 0; transform: scale(1); opacity: 1;}
+    100%{right: 100px; transform: scale(1.5); opacity: 0;}
+}
